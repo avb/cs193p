@@ -30,6 +30,11 @@
     return self;
 }
 
+- (void)dealloc {
+    NSLog(@"De-allocating polygon");
+    [super dealloc];  
+}
+
 - (void)setNumberOfSides:(int)value {
     if (value >= self.minimumNumberOfSides && value <= self.maximumNumberOfSides){
         numberOfSides = value;

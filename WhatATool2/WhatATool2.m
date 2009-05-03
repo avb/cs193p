@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "PolygonShape.h"
 
 void PrintPathInfo() { 
     // Section 1: Strings as file system paths
@@ -88,6 +89,30 @@ void PrintIntrospectionInfo() {
     }    
 }
 
+void PrintPolygonInfo() {
+    NSMutableArray *polygons = [[NSMutableArray alloc] init];
+    PolygonShape *polygon;
+    
+    polygon = [[PolygonShape alloc] initWithNumberOfSides:4 minimumNumberOfSides:3 maximumNumberOfSides:7];
+    [polygons addObject:polygon];
+    NSLog(@"%@", polygon);
+    [polygon release];
+    
+    polygon = [[PolygonShape alloc] initWithNumberOfSides:6 minimumNumberOfSides:5 maximumNumberOfSides:9];
+    [polygons addObject:polygon];
+    NSLog(@"%@", polygon);
+    [polygon release];
+    
+    polygon = [[PolygonShape alloc] init];
+    [polygon setMinimumNumberOfSides:9];
+    [polygon setMaximumNumberOfSides:12];
+    [polygon setNumberOfSides:12];
+    [polygons addObject:polygon];
+    NSLog(@"%@", polygon);
+    [polygon release];
+    
+    [polygons release];
+}
 
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -96,7 +121,7 @@ int main (int argc, const char * argv[]) {
     PrintProcessInfo();        // Section 2 
     PrintBookmarkInfo();       // Section 3 
     PrintIntrospectionInfo();  // Section 4 
-//    PrintPolygonInfo();        // Section 6 (No function for section 5)     
+    PrintPolygonInfo();        // Section 6 (No function for section 5)     
     
     [pool release];
     return 0;
