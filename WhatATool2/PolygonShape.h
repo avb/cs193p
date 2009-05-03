@@ -12,8 +12,8 @@
 @interface PolygonShape : NSObject {
     // instance variables
     int numberOfSides;
-    int minimumNumberOfSides = 3;
-    int maximumNumberOfSides = 12;
+    int minimumNumberOfSides;
+    int maximumNumberOfSides;
 }
 
 - (id)init;

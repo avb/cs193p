@@ -61,7 +61,7 @@
 }
 
 - (float)angleInRadians {
-    return (self.angleInDegrees * (M_PI /180);
+    return (self.angleInDegrees * (M_PI /180));
 }
 
 - (NSString *)name {
