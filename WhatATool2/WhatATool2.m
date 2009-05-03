@@ -98,6 +98,6 @@ int main (int argc, const char * argv[]) {
     PrintIntrospectionInfo();  // Section 4 
 //    PrintPolygonInfo();        // Section 6 (No function for section 5)     
     
-    [pool drain];
+    [pool release];
     return 0;
 }

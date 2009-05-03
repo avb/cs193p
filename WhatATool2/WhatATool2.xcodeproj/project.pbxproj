@@ -10,6 +10,7 @@
 		8DD76F9A0486AA7600D96B5E /* WhatATool2.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* WhatATool2.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* WhatATool2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* WhatATool2.1 */; };
+		B38451240F9BEFB9002C9D84 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B38451230F9BEFB9002C9D84 /* PolygonShape.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* WhatATool2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatATool2_Prefix.pch; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* WhatATool2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WhatATool2; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38451220F9BEFB9002C9D84 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
+		B38451230F9BEFB9002C9D84 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
 		C6859EA3029092ED04C91782 /* WhatATool2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = WhatATool2.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +62,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B38451220F9BEFB9002C9D84 /* PolygonShape.h */,
+				B38451230F9BEFB9002C9D84 /* PolygonShape.m */,
 				32A70AAB03705E1F00C91783 /* WhatATool2_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* WhatATool2.m */,
 			);
@@ -133,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* WhatATool2.m in Sources */,
+				B38451240F9BEFB9002C9D84 /* PolygonShape.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
