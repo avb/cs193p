@@ -3,8 +3,9 @@
 #import "PolygonShape.h"
 
 @interface Controller : NSObject {
-    IBOutlet UIButton *decreaseButton;
-    IBOutlet UIButton *increaseButton;
+//    IBOutlet UIButton *decreaseButton;
+//    IBOutlet UIButton *increaseButton;
+    IBOutlet UISlider *sidesSlider;
     IBOutlet UILabel *numberOfSidesLabel;
     IBOutlet UILabel *minValueLabel;
     IBOutlet UILabel *maxValueLabel;
@@ -14,7 +15,8 @@
     
     IBOutlet PolygonShape *polygon;
 }
-- (IBAction)decrease;
-- (IBAction)increase;
+//- (IBAction)decrease;
+//- (IBAction)increase;
+- (IBAction)setSides;
 - (void)updateInterface;
 @end

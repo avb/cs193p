@@ -13,7 +13,7 @@
     NSLog(@"My polygon: %@", polygon);
 }
 
-- (IBAction)decrease {
+/*- (IBAction)decrease {
     polygon.numberOfSides = polygon.numberOfSides - 1;
     [self updateInterface];
 }
@@ -21,11 +21,16 @@
 - (IBAction)increase {
     polygon.numberOfSides++;
     [self updateInterface];
+}*/
+
+- (IBAction)setSides {
+    polygon.numberOfSides = [sidesSlider value] ;
+    [self updateInterface];
 }
 
 - (void)updateInterface {
-    increaseButton.enabled = (polygon.numberOfSides < 12);
-    decreaseButton.enabled = (polygon.numberOfSides > 3);
+/*    increaseButton.enabled = (polygon.numberOfSides < 12);
+    decreaseButton.enabled = (polygon.numberOfSides > 3); */
     numberOfSidesLabel.text = [NSString stringWithFormat:@"%d", polygon.numberOfSides];
     minValueLabel.text = [NSString stringWithFormat:@"%d", polygon.minimumNumberOfSides];
     maxValueLabel.text = [NSString stringWithFormat:@"%d", polygon.maximumNumberOfSides];
