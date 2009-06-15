@@ -163,7 +163,7 @@
 					<object class="IBUILabel" id="279480541">
 						<reference key="NSNextResponder" ref="380026005"/>
 						<int key="NSvFlags">1316</int>
-						<string key="NSFrame">{{111, 188}, {42, 21}}</string>
+						<string key="NSFrame">{{101, 188}, {52, 21}}</string>
 						<reference key="NSSuperview" ref="380026005"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -177,7 +177,7 @@
 					<object class="IBUILabel" id="122741085">
 						<reference key="NSNextResponder" ref="380026005"/>
 						<int key="NSvFlags">1316</int>
-						<string key="NSFrame">{{258, 188}, {42, 21}}</string>
+						<string key="NSFrame">{{240, 189}, {60, 21}}</string>
 						<reference key="NSSuperview" ref="380026005"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -205,7 +205,7 @@
 					<object class="IBUILabel" id="444278469">
 						<reference key="NSNextResponder" ref="380026005"/>
 						<int key="NSvFlags">1316</int>
-						<string key="NSFrame">{{20, 188}, {83, 21}}</string>
+						<string key="NSFrame">{{20, 188}, {73, 21}}</string>
 						<reference key="NSSuperview" ref="380026005"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -230,7 +230,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
 					</object>
-					<object class="IBUILabel" id="224768464">
+					<object class="IBUILabel" id="225566868">
 						<reference key="NSNextResponder" ref="380026005"/>
 						<int key="NSvFlags">1316</int>
 						<string key="NSFrame">{{20, 35}, {280, 33}}</string>
@@ -362,7 +362,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">polyNameLabel</string>
 						<reference key="source" ref="100382098"/>
-						<reference key="destination" ref="224768464"/>
+						<reference key="destination" ref="225566868"/>
 					</object>
 					<int key="connectionID">38</int>
 				</object>
@@ -392,10 +392,10 @@
 							<reference ref="293428723"/>
 							<reference ref="461613401"/>
 							<reference ref="444278469"/>
-							<reference ref="279480541"/>
 							<reference ref="196409081"/>
 							<reference ref="122741085"/>
-							<reference ref="224768464"/>
+							<reference ref="225566868"/>
+							<reference ref="279480541"/>
 						</object>
 						<reference key="parent" ref="957960031"/>
 					</object>
@@ -487,7 +487,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">37</int>
-						<reference key="object" ref="224768464"/>
+						<reference key="object" ref="225566868"/>
 						<reference key="parent" ref="380026005"/>
 					</object>
 				</object>

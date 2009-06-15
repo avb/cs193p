@@ -74,14 +74,14 @@
     polyNames = [NSDictionary dictionaryWithObjectsAndKeys:
              @"Digon",          [NSNumber numberWithInt:2],
              @"Triangle",       [NSNumber numberWithInt:3],
-             @"Quadrilateral",  [NSNumber numberWithInt:4],
+             @"Square / Quadrilateral",  [NSNumber numberWithInt:4],
              @"Pentagon",       [NSNumber numberWithInt:5],
              @"Hexagon",        [NSNumber numberWithInt:6],
              @"Heptagon",       [NSNumber numberWithInt:7],
              @"Octagon",        [NSNumber numberWithInt:8],
-             @"Enneagon",       [NSNumber numberWithInt:9],
+             @"Nonagon / Ennagon",       [NSNumber numberWithInt:9],
              @"Decagon",        [NSNumber numberWithInt:10],  
-             @"Hendecagon",     [NSNumber numberWithInt:11],
+             @"Hendecagon / Undecagon",     [NSNumber numberWithInt:11],
              @"Dodecagon",      [NSNumber numberWithInt:12],
              nil];
     return [polyNames objectForKey:[NSNumber numberWithInt:self.numberOfSides]];
