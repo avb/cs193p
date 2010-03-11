@@ -1,7 +1,11 @@
 #### `.gitignore`
 # xcode noise
 build/*
+*.pbxuser
 *.mode1v3
+~.nib/ 
+*.perspective 
+*.perspectivev3
 
 # SVN directories
 .svn
