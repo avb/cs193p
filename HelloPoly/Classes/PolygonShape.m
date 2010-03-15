@@ -3,7 +3,7 @@
 //  WhatATool2
 //
 //  Created by Adam Brown on 4/19/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Adam Brown. All rights reserved.
 //
 
 #import "PolygonShape.h"
@@ -15,60 +15,106 @@
 @synthesize minimumNumberOfSides;
 @synthesize maximumNumberOfSides;
 
+
+// initialization methods
+- (void)dealloc {
+    //NSLog(@"De-allocating polygon");
+    [super dealloc];  
+}
+
 - (id) init {
-    return [self initWithNumberOfSides:5 minimumNumberOfSides:3 maximumNumberOfSides:10];
+    return [self initWithNumberOfSides:kMinimumNumberOfSides minimumNumberOfSides:kMinimumNumberOfSides maximumNumberOfSides:kMaximumNumberOfSides];
+}
+
+- (id)initWithNumberOfSides:(int)sides {
+    return [self initWithNumberOfSides:sides minimumNumberOfSides:kMinimumNumberOfSides maximumNumberOfSides:kMaximumNumberOfSides];
+}
+
+- (id)initWithNumberOfSides:(int)sides minimumNumberOfSides:(int)min {
+    return [self initWithNumberOfSides:sides minimumNumberOfSides:min maximumNumberOfSides:kMaximumNumberOfSides];
 }
 
 - (id)initWithNumberOfSides:(int)sides minimumNumberOfSides:(int)min maximumNumberOfSides:(int)max {
     if (self = [super init]) {
-        minimumNumberOfSides = 3;
-        maximumNumberOfSides = 12;
+        minimumNumberOfSides = kMinimumNumberOfSides;
+        maximumNumberOfSides = kMaximumNumberOfSides;
+        numberOfSides = minimumNumberOfSides;
+        
         self.minimumNumberOfSides = min;
         self.maximumNumberOfSides = max;
         self.numberOfSides = sides;
     }
+    
     return self;
 }
 
-- (void)dealloc {
-    NSLog(@"De-allocating polygon");
-    [super dealloc];  
-}
-
-- (void)setNumberOfSides:(int)value {
-    if (value >= self.minimumNumberOfSides && value <= self.maximumNumberOfSides){
-        numberOfSides = value;
-    } else if (value < self.minimumNumberOfSides) {
-        NSLog(@"Invalid number of sides: %d is less than the minimum of %d allowed.", value, self.minimumNumberOfSides);
-    } else if (value > self.maximumNumberOfSides) {
-        NSLog(@"Invalid number of sides: %d is greater than the maximum of %d allowed.", value, self.maximumNumberOfSides);
+// setter methods using validation
+- (void)setNumberOfSides:(int)sides {
+    if (sides != numberOfSides && [self isValidNumberOfSides:sides]) {
+        numberOfSides = sides;
     }
 }
 
-- (void)setMinimumNumberOfSides:(int)value {
-    if (value > 2) {
-        minimumNumberOfSides = value;
-    } else {
-        NSLog(@"Invalid number of sides: A minimum of 3 sides is required");
+- (void)setMinimumNumberOfSides:(int)sides {
+    if (sides != minimumNumberOfSides && [self isValidMinimumNumberOfSides:sides]) {
+        minimumNumberOfSides = sides;
     }
 }
 
-- (void)setMaximumNumberOfSides:(int)value {
-    if (value <= 12) {
-        maximumNumberOfSides = value;
-    } else {
-        NSLog(@"Invalid number of sides: Maximum number of sides cannot exceed 12.");
+- (void)setMaximumNumberOfSides:(int)sides {
+    if (sides != maximumNumberOfSides && [self isValidMaximumNumberOfSides:sides]) {
+        maximumNumberOfSides = sides;
     }
 }
 
+// validation methods
+- (BOOL)isValidNumberOfSides:(int)sides {
+    if (sides < minimumNumberOfSides) {
+        return NO;
+    }
+    
+    if (sides > maximumNumberOfSides) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (BOOL)isValidMinimumNumberOfSides:(int)sides {
+    if (sides < kMinimumNumberOfSides) {
+        return NO;
+    }
+    
+    if (sides >= [self maximumNumberOfSides]) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (BOOL)isValidMaximumNumberOfSides:(int)sides {
+    if (sides > kMaximumNumberOfSides) {
+        return NO;
+    }
+    
+    if (sides <= [self minimumNumberOfSides]) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+// angle methods
 - (float)angleInDegrees {
-    return (180 * (numberOfSides - 2) / numberOfSides);
+    return (180 * (self.numberOfSides - 2) / self.numberOfSides);
 }
 
 - (float)angleInRadians {
     return (self.angleInDegrees * (M_PI /180));
 }
 
+// name/description methods
 - (NSString *)name {
     NSDictionary *polyNames;
     polyNames = [NSDictionary dictionaryWithObjectsAndKeys:
