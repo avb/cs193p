@@ -16,7 +16,7 @@
     
     PolygonView *polygonView = [[PolygonView alloc] initWithFrame:CGRectMake(10.0, 160.0, 220.0, 140.0)];
     [polygonView setPolygon:polygon];
-    //[self.view setNeedsDisplay];
+    [self.view setNeedsDisplay];
     [polygonView release];
     
     [self updateInterface];
@@ -52,7 +52,7 @@
 
 
     // redraw polygon
-    //[self.view setNeedsDisplay];
+    [self.view setNeedsDisplay];
     
 }
 

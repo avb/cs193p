@@ -203,7 +203,7 @@
 						<float key="IBUIMinValue">3</float>
 						<float key="IBUIMaxValue">12</float>
 					</object>
-					<object class="IBUIView" id="397342809">
+					<object class="IBUIView" id="537765226">
 						<reference key="NSNextResponder" ref="380026005"/>
 						<int key="NSvFlags">1316</int>
 						<string key="NSFrame">{{0, 223}, {320, 257}}</string>
@@ -257,14 +257,6 @@
 						<reference key="destination" ref="989854205"/>
 					</object>
 					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">polygon</string>
-						<reference key="source" ref="100382098"/>
-						<reference key="destination" ref="360037251"/>
-					</object>
-					<int key="connectionID">22</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -325,11 +317,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">polygon</string>
+						<reference key="source" ref="537765226"/>
+						<reference key="destination" ref="360037251"/>
+					</object>
+					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">polygon</string>
+						<reference key="source" ref="100382098"/>
+						<reference key="destination" ref="360037251"/>
+					</object>
+					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="100382098"/>
-						<reference key="destination" ref="397342809"/>
+						<reference key="destination" ref="537765226"/>
 					</object>
-					<int key="connectionID">53</int>
+					<int key="connectionID">60</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -355,7 +363,7 @@
 							<reference ref="196409081"/>
 							<reference ref="225566868"/>
 							<reference ref="784626747"/>
-							<reference ref="397342809"/>
+							<reference ref="537765226"/>
 							<reference ref="122741085"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -448,7 +456,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">52</int>
-						<reference key="object" ref="397342809"/>
+						<reference key="object" ref="537765226"/>
 						<reference key="parent" ref="380026005"/>
 					</object>
 				</array>
@@ -461,7 +469,7 @@
 				<string key="15.CustomClassName">Controller</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<dictionary class="NSMutableDictionary" key="2.IBAttributePlaceholdersKey"/>
-				<string key="2.IBEditorWindowLastContentRect">{{607, 332}, {320, 480}}</string>
+				<string key="2.IBEditorWindowLastContentRect">{{608, 332}, {320, 480}}</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="21.CustomClassName">PolygonShape</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -484,7 +492,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">53</int>
+			<int key="maxID">60</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
